@@ -99,7 +99,6 @@ export function main() {
 
 }
 
-/* Função com os dados da pessoa desenvolvedora */
 function sobre(): void {
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: ");
