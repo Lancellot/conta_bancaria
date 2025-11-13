@@ -9,7 +9,7 @@ export function main() {
 
     let contas: ContaController = new ContaController();
 
-    let opcao, numero, agencia, tipo, saldo, limite, aniversario: number;
+    let opcao, numero, agencia, tipo, saldo, limite, aniversario, valor, numeroDestino: number;
     let titular: string;
     const tiposContas = ['Conta Corrente', 'Conta Poupanca'];
 
@@ -175,17 +175,36 @@ export function main() {
                     console.log(colors.fg.whitestrong,
                         "\n\nSaque\n\n", colors.reset);
 
+                        numero = readlinesync.questionInt('Digite o némero da Conta: ');
+
+                        valor = readlinesync.questionFloat('\nDigite o valor do Saque (R$): ');
+
+                        contas.sacar(numero, valor);
+
                     keyPress()
                     break;
                 case 7:
                     console.log(colors.fg.whitestrong,
                         "\n\nDepósito\n\n", colors.reset);
 
+                        numero = readlinesync.questionInt('Digite o némero da Conta: ');
+
+                        valor = readlinesync.questionFloat('\nDigite o valor do Deposito (R$): ');
+
+                        contas.depositar(numero, valor);
+
                     keyPress()
                     break;
                 case 8:
                     console.log(colors.fg.whitestrong,
                         "\n\nTransferência entre Contas\n\n", colors.reset);
+
+                        numero = readlinesync.questionInt('Digite o numero da conta de Origem: ');
+                        numeroDestino = readlinesync.questionInt('Digite o numero da conta de destino: ');
+
+                        valor = readlinesync.questionFloat('\nDigite o valor do deposito: ');
+
+                        contas.transferir(numero, numeroDestino, valor);
 
                     keyPress()
                     break;
@@ -205,9 +224,9 @@ export function main() {
 
 function sobre(): void {
     console.log("\n*****************************************************");
-    console.log("Projeto Desenvolvido por: ");
+    console.log("Projeto Desenvolvido por: Assis Pires Neto");
     console.log("Generation Brasil - generation@generation.org");
-    console.log("github.com/conteudoGeneration");
+    console.log("https://github.com/Lancellot");
     console.log("*****************************************************");
 }
 
