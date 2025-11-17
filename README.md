@@ -27,7 +27,7 @@ Projeto didático que implementa operações básicas de uma conta bancária: cr
 1. Clone o repositório:
 
 ```bash
-git clone <repo-url>
+git clone [https://github.com/Lancellot/conta_bancaria](https://github.com/Lancellot/conta_bancaria.git)
 cd conta_bancaria
 ```
 
