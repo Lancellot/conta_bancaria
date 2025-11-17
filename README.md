@@ -88,8 +88,3 @@ Projeto desenvolvido como parte da formação Generation Brasil.
 
 ---
 
-Se quiser, eu posso também:
-
-- adicionar um script `start` no `package.json` para rodar com `npm start`;
-- remover/normalizar extensões `.ts` nas importações;
-- adicionar instruções de testes ou execução no Windows PowerShell.
